@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: skyblue;
+        }
+        .timer{
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 15px 20px black;
+
+        }
+        input{
+            width: 60px;
+            padding: 5px;
+            font-size: 1.2em;
+            margin: 5px;
+            text-align: center;
+        }
+        .disply{
+            margin: 20px;
+            font-size:1.2rem ;
+            color:black;
+        }
+        .button{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button#start{
+            background-color: green;
+            color: white;
+        }
+        button#pause{
+            background-color: yellow;
+            color: black;
+        }
+        button#reset{
+            background-color: red;
+            color: white;
+        }
+        .alert{
+            color: red;
+            font-weight: bold;
+
+        }
+
+
+    </style>
+</head>
+<body>
+   
+   <div class="timer">
+    <h1>Countdown Timer</h1> 
+    <div class="input">
+        <input type="number" id="hours" placeholder="Hours" min="0" max="24">
+        <input type="number" id="minutes" placeholder="minutes" min="0" max="59">
+        <input type="number" id="seconds" placeholder="seconds" min="0" max="59">
+
+    </div>
+    <div class="display" ><span id="time">00.00.00</span>
+
+    </div>
+    <div class="button">
+        <button id="start">Start</button>
+        <button id="pause">pause</button>
+        <button id="reset">Reset</button>
+    </div>
+    <div id="alert" class="alert">
+
+    </div>
+
+   </div>
+
+
+   <script>
+    const hoursInput = document.getElementById('hours');
+    const minutesInput = document.getElementById('minutes');
+    const secondsInput = document.getElementById('seconds');
+    const timeDisplay = document.getElementById('time');
+    const startButton = document.getElementById('start');
+    const pauseButton = document.getElementById('pause');
+    const resetButton = document.getElementById('reset');
+    const alertBox = document.getElementById('alert');
+
+    let countdown; 
+    let remainingTime = 0; 
+    let isRunning = false;
+
+    
+    
+</script>
+</body>
+</html>
